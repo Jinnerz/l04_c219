@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@font-face {
+  font-family: 'Italian';
+  src: url('./assets/Italianno-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Italian2';
+  src: url('./assets/ItalianBreakfast-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headertext {
+  font-family: Italian;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  border-bottom: 1.6rem solid #edc84b;
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+/* *************** */
+
+.header {
+  align-self: stretch;
+}
+
+.header h1 {
+  /* Non-accessible color */
+  color: #edc84b;
+  /* color: #af8602; */
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.header h1::before,
+.header h1::after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 12rem;
+  background-color: #edc84b;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.header h1::before {
+  left: 0;
+}
+
+.header h1::after {
+  right: 0;
+}
+
+/* *************** */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.pizzamenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.menu > p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+  width: 80%;
+}
+
+.imagebox {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.imagebox::before {
+  content: '';
+  display: block;
+  padding-top: 75%; /* This gives a 4:3 aspect ratio, you can adjust this value */
+}
+
+.imagebox img {
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+.descriptionbox{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.pizzabox{
+  width: calc(50% - 1rem); /* Two items per row on larger screens */
+  border: 2px solid black;
+  height: auto; /* Adjust the height to fit content */
+  padding: 1rem;
+}
+
+/* Ensure pizza items take full width on small screens */
+@media (max-width: 768px) {
+  .pizzabox {
+    width: 100%; /* One item per row on small screens */
+  }
+}
+
+.pizzaname {
+  color: orange;
+  font-size: x-large;
+}
+
+.buttonbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.tagline {
+  display: flex;
+  text-align: center;
+}
+
+.search-bar {
+  width: 50%;
+}
+
+/* *************** */
+
+.footer {
+  font-size: 1.4rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.btn {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #edc84b;
+  padding: 1.4rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #e9bb24;
+}
+
+.openbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
